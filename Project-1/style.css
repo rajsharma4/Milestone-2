@@ -1,0 +1,192 @@
+/* Universal Designing */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Body Designing */
+body {
+    margin: 60px 40px;
+}
+
+/*********************** Blog HomePage  ***************************/
+
+/* Grid-Container Designing */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    overflow-y: hidden;
+}
+
+/* Grids Designing */
+.grid {
+    border: 2px solid silver;
+    padding: 12px;
+    border-radius: 12px;
+    white-space: wrap;
+    word-wrap: break-word;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Image Designing  */
+img {
+    height: 180px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.first-grid {
+    width: 100%;
+}
+
+/* Style for the image in all grids except the first grid */
+.grid:not(.first-grid) img {
+    width: 100%;
+}
+
+/* Button Designing for Read */
+button {
+    width: 100%;
+    background-color: #e8bfbf;
+    color: #ff6161;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/******************* Add Blog Model **************************/
+
+/* Add Button */
+#add-btn {
+    font-size: 4rem;
+    position: fixed;
+    top: 10px;
+    right: 60px;
+}
+
+
+#form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3), 0 0 1000px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 30%;
+    background-color: #e6f3f7;
+    border-radius: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid silver;
+    font-size: 16px;
+}
+
+
+
+#cut-icon {
+    float: right;
+}
+
+#blog-btn {
+    background-color: blue;
+    color: white;
+}
+
+
+/* Add the following CSS rules */
+.blog-details {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.blog-details-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    width: 90%;
+    height: 90%;
+}
+
+#text {
+    display: none;
+}
+
+#cut-icon {
+    font-size: 25px;
+    color: #2a2727;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.detail-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blue;
+    padding: 20px;
+    color: white;
+}
+
+.blog-details p {
+    margin: 30px 0;
+}
+
+.delete-icon {
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #0000ff;
+    font-size: 12px;
+    cursor: pointer;
+    color: #0040ff;
+}
+
+@media screen and (max-width: 1050px) {
+    #form-container {
+        width: 100%;
+    }
+}
